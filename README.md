@@ -49,8 +49,8 @@ Things you may want to cover:
 |user_id|integer|null:false,foreign_key: true|
 
 ### Association
-- has_many :user
-- has_many :groups
+- belongs_to :user
+- belongs_to :groups
 
 
 
@@ -58,9 +58,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false,unique: true|
-|name|string|null: false|
-|user_id|integer|null:false,foreign_kye: true|
+|name|string|null: false,unique: true|
 
 ### Association
 - has_many :groups_users
@@ -77,8 +75,8 @@ Things you may want to cover:
 |groups_id|integer|null: false,foreign/key:true|
 
 ### Association
-- has_many :group
-- has_many :user
+- belongs_to :group
+- belongs_to :user
 
 
 
