@@ -44,13 +44,13 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
-|image|string|null: false|
-|group_id|integer|null:false,foreign_key: true|
-|user_id|integer|null:false,foreign_key: true|
+|image|string||
+|group_id|reference|foreign_key: true|
+|user_id|reference|foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
 
 
 
@@ -71,8 +71,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false,foreign_key:true|
-|groups_id|integer|null: false,foreign/key:true|
+|users_id|reference|foreign_key:true|
+|groups_id|reference|foreign_key:true|
 
 ### Association
 - belongs_to :group
