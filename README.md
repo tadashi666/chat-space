@@ -39,7 +39,7 @@ Things you may want to cover:
 
 
 
-## messagesテーブル
+## messagesテーブル.
 
 |Column|Type|Options|
 |------|----|-------|
