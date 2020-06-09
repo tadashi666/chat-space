@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+// 全体構成 wrapper
+
+.wrapper{
+
+  display: flex;
+
+
+  // Side-bar(サイドバーの大枠)
+
+  .Side-bar{
+    background-color:#253141;
+    height:100vh;
+    width:300px;
+
+
+    // Side-bar__user-name(サイドバー上部)
+
+
+    .Side-bar__user-name{
+      height:100px;
+      position: relative;
+
+      .top-items{
+        height:20px;
+        width:260px;
+        position: absolute;
+        top: 50%; 
+        left: 50%;  
+        transform: translateY(-50%) translateX(-50%); 
+        -webkit-transform: translateY(-50%) translateX(-50%);
+
+        display:flex;
+        justify-content: space-between;
+
+
+        .top-items__name{
+          color:#ffffff;
+
+        }
+
+        .top-items__icons{
+
+          text-align: right;
+          .Contents__btn{
+            color:#ffffff;
+            text-decoration: none;
+            
+          }
+          .btn-fa{
+            margin-right:5px;
+          }
+
+        }
+
+        }
+
+
+    }
+
+
+    // Side-bar__group-list(サイドバー下部)
+
+
+    .Side-bar__group-list{
+      height:calc(100vh - 100px);
+      background-color:#2f3e51;
+
+      .Side-name{
+        color:#ffffff;
+        font-weight: bold;
+        padding:20px 20px 5px 20px;
+
+      }
+
+      .Side-tweets{
+        color:#ffffff;
+        font-weight: bold;
+        padding:0 20px;
+      }
+
+
+    }
+
+  }
+
+
+
+  // Chat-main(チャットメイン大枠)
+
+
+  .Chat-main{
+    width:calc(100vw - 300px);
+    height:100vh;
+    background-color:#ffffff;
+
+
+    // Chat-main__group-info(チャットメイン上部)
+
+    .Chat-main__group-info{
+      height:100px;
+
+      .header-items{
+
+        display: flex;
+        justify-content: space-between;
+
+        .header__left-box{
+
+          padding-left:40px;
+
+          .header-name{
+            color:#333333;
+            font-size: 20px;
+            margin-top:35px;
+          }
+
+          .header-group{
+            color:#999999;
+            font-size: 12px;
+            margin-top:15px;
+          }
+
+        }
+
+        .header__right-box{
+          
+
+          .btn{
+            color:#38aef0;
+            font-size: 16px;
+            padding:10px 20px;
+            margin:28px 40px;
+            border: 1px solid #38aef0;
+            display: block;
+            text-decoration: none;
+          }
+        }
+
+      }
+
+
+    }
+
+    // Chat-main__message-list(チャットメイン中部)
+
+    .Chat-main__message-list{
+      height:calc(100vh - 190px);
+      background-color:#fafafa;
+
+      .main-box{
+
+        display: flex;
+        padding:35px 0 0 40px;
+
+        .main-left{
+
+          .main-name{
+            color:#333333;
+            font-size:16px;
+          }
+          .main-tweets{
+            color:#999999;
+            font-size: 12px;
+            margin-top:12px;
+          }
+        }
+
+        .main-right{
+
+          .main-times{
+            color:#434A54;
+            font-size: 14px;
+          }
+
+
+        }
+
+
+
+      }
+    }
+
+    // Chat-main__massage-form(チャットメイン下部)
+
+    .Chat-main__massage-form{
+      height:90px;
+      background-color:#d2d2d2;
+
+
+      .Form__contents{
+
+        display: flex;
+        align-items: center;
+        margin-left:40px;
+        margin-right:40px;
+        line-height: 100px;
+       
+
+        .Form__inputBox--left{
+          display: flex;
+          height:50px;
+          width:100%;
+          margin-right:15px;
+          position: relative;
+
+          .Form__inputText{
+            width:100%;
+            
+          }
+
+          
+
+          .btn-image{
+            position: absolute;
+            right:10px;
+            line-height: 50px;
+            font-size: 40px;
+            color:black;
+            
+            .input{
+              display: none;
+            }
+          }
+
+        }
+
+        .Form__inputBox--right{
+
+          .Form__submitBtn{
+            height:50px;
+            color:white;
+            font-size: 16px;
+            padding:10px 20px;
+            margin:28px 40px;
+            border: 1px solid #38aef0;
+            display: block;
+            text-decoration: none;
+            background-color: skyblue;
+
+
+
+
+          }
+
+          
+        }
+
+
+      }
+
+
+    }
+
+  }
+
+  
+}

@@ -1,0 +1,32 @@
+.Chat-main
+
+  .Chat-main__group-info
+    .header-items
+      .header__left-box
+        %p.header-name tadashi
+        %p.header-group Member: tadashi      
+      
+      .header__right-box
+        = link_to "Edit", "#" ,class: "btn"
+
+
+
+  .Chat-main__message-list
+    .main-box
+      .main-left
+        .main-name tadashi
+        .main-tweets hello
+      .main-right
+        .main-times 2020/6/9(Thu) 14:07:12
+
+  .Chat-main__massage-form
+    %form.Form__contents
+      .Form__inputBox--left
+        %input.Form__inputText{"placeholder": "type a message", "type": "text"}
+        %label.btn-image
+          = icon("fas","image") 
+          %input.input{type: "file"}
+      .Form__inputBox--right
+        %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
+        
+       
