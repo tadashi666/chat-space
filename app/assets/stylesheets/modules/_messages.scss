@@ -45,18 +45,33 @@
 
     // Side-bar__group-list(サイドバー下部)
     .Side-bar__group-list{
+      
       height:calc(100vh - 100px);
       background-color:#2f3e51;
-      .Side-name{
+      .Group{
+        &__name{
         color:#ffffff;
         font-weight: bold;
         padding:20px 20px 5px 20px;
-      }
-      .Side-tweets{
+        }
+        &__message{
         color:#ffffff;
         font-weight: bold;
         padding:0 20px;
+        }
       }
+
+
+      // .Side-name{
+      //   color:#ffffff;
+      //   font-weight: bold;
+      //   padding:20px 20px 5px 20px;
+      // }
+      // .Side-tweets{
+      //   color:#ffffff;
+      //   font-weight: bold;
+      //   padding:0 20px;
+      // }
     }
   }
 
