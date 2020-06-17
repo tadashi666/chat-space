@@ -118,34 +118,32 @@
     .Chat-main__message-list{
       height:calc(100vh - 190px);
       background-color:#fafafa;
-      .main-box{
+
+      .main-left{
         display: flex;
-        padding:35px 0 0 40px;
-        .main-left{
-          .main-name{
-            color:#333333;
-            font-size:16px;
-          }
-          .main-tweets{
-            color:#999999;
-            font-size: 12px;
-            margin-top:12px;
-          }
+        .main-name{
+          color:#333333;
+          font-size:16px;
         }
-        .main-right{
-          .main-times{
-            color:#434A54;
-            font-size: 14px;
-          }
+        .main-tweets{
+          color:#434A54;
+          font-size: 14px;
         }
       }
+      .main-right{
+        color:#999999;
+        font-size: 12px;
+        margin-top:12px;
+      }
     }
+      
+    
 
     // Chat-main__massage-form(チャットメイン下部)
     .Chat-main__massage-form{
       height:90px;
-      background-color:#d2d2d2;
-      .Form__contents{
+      background-color:hsl(0, 0%, 82%);
+      .Form{
         display: flex;
         align-items: center;
         margin-left:40px;
@@ -159,6 +157,10 @@
           position: relative;
           .Form__inputText{
             width:100%;
+            resize: none;
+          }
+          .input{
+            display: none;
           }
           .btn-image{
             position: absolute;
@@ -166,9 +168,6 @@
             line-height: 50px;
             font-size: 40px;
             color:black; 
-            .input{
-              display: none;
-            }
           }
         }
         .Form__inputBox--right{

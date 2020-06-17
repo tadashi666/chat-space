@@ -3,30 +3,31 @@
   .Chat-main__group-info
     .header-items
       .header__left-box
-        %p.header-name tadashi
-        %p.header-group Member: tadashi      
+        %p.header-name 
+          = @group.name
+        %p.header-group
+          - @group.users.each do |user|
+            = user.name
       
       .header__right-box
-        = link_to "Edit", "#" ,class: "btn"
+        = link_to "Edit", edit_group_path(@group.id), class: "btn"
 
 
 
   .Chat-main__message-list
-    .main-box
-      .main-left
-        .main-name tadashi
-        .main-tweets hello
-      .main-right
-        .main-times 2020/6/9(Thu) 14:07:12
+    = render @messages
+        
+
 
   .Chat-main__massage-form
-    %form.Form__contents
-      .Form__inputBox--left
-        %input.Form__inputText{"placeholder": "type a message", "type": "text"}
-        %label.btn-image
-          = icon("fas","image") 
-          %input.input{type: "file"}
-      .Form__inputBox--right
-        %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
-        
+    .Form__contents
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+        .Form__inputBox--left
+          = f.text_field :content,class: "Form__inputText"
+          = f.label :image, class: 'btn-image' do
+            = icon('far', 'image')
+          = f.file_field :image, class: 'input'
+        .Form__inputBox--right
+          = f.submit 'Send', class: 'Form__submitBtn'
+          
        
