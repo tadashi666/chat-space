@@ -23,7 +23,7 @@
     .Form__contents
       = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
         .Form__inputBox--left
-          = f.text_field :content,class: "Form__inputText"
+          = f.text_field :content,class: "Form__inputText",placeholder:"type a message"
           = f.label :image, class: 'btn-image' do
             = icon('far', 'image')
           = f.file_field :image, class: 'input'
