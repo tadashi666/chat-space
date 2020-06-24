@@ -48,16 +48,16 @@
       
       height:calc(100vh - 100px);
       background-color:#2f3e51;
+      
       .Group{
         &__name{
         color:#ffffff;
-        font-weight: bold;
         padding:20px 20px 5px 20px;
         }
         &__message{
         color:#ffffff;
-        font-weight: bold;
         padding:0 20px;
+        font-size:15px;
         }
       }
 
@@ -98,6 +98,7 @@
             color:#999999;
             font-size: 12px;
             margin-top:15px;
+            display: flex;
           }
         }
         .header__right-box{
@@ -119,11 +120,13 @@
       height:calc(100vh - 190px);
       background-color:#fafafa;
       overflow:scroll;
+      padding:35px 0 0 40px;
       .main-left{
         display: flex;
         .main-name{
           color:#333333;
           font-size:16px;
+          margin-right:10px;
         }
         .main-tweets{
           color:#434A54;
@@ -134,6 +137,7 @@
         color:#999999;
         font-size: 12px;
         margin-top:12px;
+        margin-bottom:46px;
       }
     }
       

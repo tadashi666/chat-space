@@ -3,11 +3,13 @@
   .Chat-main__group-info
     .header-items
       .header__left-box
-        %p.header-name 
+        .header-name 
           = @group.name
-        %p.header-group
-          - @group.users.each do |user|
-            = user.name
+        .header-group
+          .text Member：
+          .texts
+            - @group.users.each do |user|
+              = user.name
       
       .header__right-box
         = link_to "Edit", edit_group_path(@group.id), class: "btn"
