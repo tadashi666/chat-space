@@ -2,16 +2,16 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageInfo">
-            <div class="MessageInfo__userName">
+        `<div class="main-box" data-message-id=${message.id}>
+          <div class="main-left">
+            <div class="main-name">
               ${message.user_name}
             </div>
-            <div class="MessageInfo__date">
+            <div class="main-tweets">
               ${message.created_at}
             </div>
           </div>
-          <div class="Message">
+          <div class="main-right">
             <p class="Message__content">
               ${message.content}
             </p>
@@ -21,16 +21,16 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="MessageBox" data-message-id=${message.id}>
-        <div class="MessageInfo">
-          <div class="MessageInfo__userName">
+      `<div class="main-box" data-message-id=${message.id}>
+        <div class="main-left">
+          <div class="main-name">
             ${message.user_name}
           </div>
-          <div class="MessageInfo__date">
+          <div class="main-tweets">
             ${message.created_at}
           </div>
         </div>
-        <div class="Message">
+        <div class="main-right">
           <p class="Message__content">
             ${message.content}
           </p>
@@ -66,11 +66,13 @@ $(function(){
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.Chat-main__message-list').append(insertHTML);
         $('.Chat-main__message-list').animate({ scrollTop: $('.Chat-main__message-list')[0].scrollHeight});
-      }　
+      }
     })
     .fail(function() {
       alert('error');
     });
   };
-  setInterval(reloadMessages, 7000);
+  
+    setInterval(reloadMessages, 7000);
+  
 });

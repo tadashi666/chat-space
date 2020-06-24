@@ -37,17 +37,17 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageBox">
-            <div class="MessageInfo">
-              <div class="MessageInfo__userName">
+        `<div class="main-box" data-message-id=${message.id}>
+      
+            <div class="main-left">
+              <div class="main-name">
                 ${message.user_name}
               </div>
-              <div class="MessageInfo__date">
+              <div class="main-tweets">
                 ${message.created_at}
               </div>
             </div>
-            <div class="Message">
+            <div class="main-right">
               <p class="Message__content">
                 ${message.content}
               </p>
@@ -57,17 +57,17 @@ $(function(){
       return html;
     } else {
       let html =
-        `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="MessageBox">
-            <div class="MessageInfo">
-              <div class="MessageInfo__userName">
+        `<div class="main-box" data-message-id=${message.id}>
+          
+            <div class="main-left">
+              <div class="main-name">
                 ${message.user_name}
               </div>
-              <div class="MessageInfo__date">
+              <div class="main-tweets">
                 ${message.created_at}
               </div>
             </div>
-            <div class="Message">
+            <div class="main-right">
               <p class="Message__content">
                 ${message.content}
               </p>
