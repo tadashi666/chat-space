@@ -162,7 +162,7 @@
         .Form__inputBox--left{
           display: flex;
           height:50px;
-          width:100%;
+          width:100vw;
           // margin-right:15px;
           position: relative;
           .Form__inputText{
@@ -188,13 +188,12 @@
             font-size: 16px;
             padding:10px 20px;
             margin-top:28px;
-            margin-right:40px;
             margin-bottom:28px;
             margin-left:15px;
             border: 1px solid #38aef0;
             display: block;
             text-decoration: none;
-            background-color: skyblue;
+            background-color: #38aef0;
           }
         }
       }
