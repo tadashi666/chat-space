@@ -110,8 +110,9 @@
           .btn{
             color:#38aef0;
             font-size: 16px;
-            padding:10px 20px;
+            padding:7px 20px;
             margin:28px 40px;
+            width:72px;
             border: 1px solid #38aef0;
             display: block;
             text-decoration: none;
@@ -132,15 +133,16 @@
           color:#333333;
           font-size:16px;
           margin-right:10px;
+          font-weight: bold;
         }
         .main-tweets{
-          color:#434A54;
-          font-size: 14px;
+          color:#999999;
+          font-size: 12px;
         }
       }
       .main-right{
-        color:#999999;
-        font-size: 12px;
+        color:#434A54;
+        font-size: 14px;
         margin-top:12px;
         margin-bottom:46px;
       }
@@ -180,11 +182,15 @@
         }
         .Form__inputBox--right{
           .Form__submitBtn{
+            width:100px;
             height:50px;
             color:white;
             font-size: 16px;
             padding:10px 20px;
-            margin:28px 40px;
+            margin-top:28px;
+            margin-right:40px;
+            margin-bottom:28px;
+            margin-left:15px;
             border: 1px solid #38aef0;
             display: block;
             text-decoration: none;
